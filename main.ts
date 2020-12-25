@@ -1,3 +1,4 @@
+let light2 = 0
 function 第三段 () {
     music.playTone(440, music.beat(BeatFraction.Whole))
     music.playTone(698, music.beat(BeatFraction.Whole))
@@ -40,29 +41,7 @@ function rvm1218_2 () {
     music.playTone(392, music.beat(BeatFraction.Whole))
 }
 input.onSound(DetectedSound.Loud, function () {
-    if (light2 > 130) {
-        第一段()
-        第二段()
-        第一段()
-        第三段()
-        第四段()
-        第五段()
-        第六段()
-        第七段()
-        第八段()
-        第四段()
-    }
-    rvm1218_1()
-    rvm1218_2()
-    rvm1218_3()
-    rvm1218_4()
-    rvm1218_5()
-    rvm1218_6()
-    rvm1217_1()
-    rvm1217_2()
-    rvm1217_3()
-    rvm1217_4()
-    rvm1217_5()
+	
 })
 function rvm1217_4 () {
     music.playTone(392, music.beat(BeatFraction.Whole))
@@ -97,23 +76,6 @@ function rvm1217_1 () {
     music.playTone(494, music.beat(BeatFraction.Half))
     music.playTone(440, music.beat(BeatFraction.Whole))
     music.playTone(440, music.beat(BeatFraction.Whole))
-}
-function 第六段 () {
-    music.playTone(698, music.beat(BeatFraction.Whole))
-    music.playTone(698, music.beat(BeatFraction.Whole))
-    music.playTone(698, music.beat(BeatFraction.Whole))
-    music.playTone(698, music.beat(BeatFraction.Whole))
-    music.playTone(698, music.beat(BeatFraction.Whole))
-    music.playTone(659, music.beat(BeatFraction.Whole))
-    music.playTone(659, music.beat(BeatFraction.Whole))
-    music.playTone(659, music.beat(BeatFraction.Whole))
-    music.playTone(784, music.beat(BeatFraction.Whole))
-    music.playTone(784, music.beat(BeatFraction.Whole))
-    music.playTone(698, music.beat(BeatFraction.Whole))
-    music.playTone(587, music.beat(BeatFraction.Whole))
-    music.playTone(523, music.beat(BeatFraction.Double))
-    music.rest(music.beat(BeatFraction.Whole))
-    music.rest(music.beat(BeatFraction.Half))
 }
 function 第八段 () {
     music.playTone(523, music.beat(BeatFraction.Double))
@@ -273,13 +235,44 @@ function 第一段 () {
     music.rest(music.beat(BeatFraction.Whole))
     music.rest(music.beat(BeatFraction.Half))
 }
-let light2 = 0
-music.setTempo(199)
 basic.forever(function () {
     light2 = input.lightLevel()
-    if (light2 > 130) {
-        basic.showString("2020")
-        basic.showIcon(IconNames.Heart)
-        basic.showString("Merry Christmas")
+    if (0 > 120) {
+        basic.showString("Hello!")
+        basic.showLeds(`
+            # # # # #
+            . . # . .
+            . . # . .
+            # . # . .
+            . # # . .
+            `)
+        basic.showLeds(`
+            # # # # #
+            # . . . .
+            # # # # #
+            # . . . .
+            # # # # #
+            `)
+        basic.showLeds(`
+            # . . . #
+            # # . . #
+            # . # . #
+            # . . # #
+            # . . . #
+            `)
+        basic.showLeds(`
+            # . . . #
+            # # . . #
+            # . # . #
+            # . . # #
+            # . . . #
+            `)
+        basic.showLeds(`
+            # . . . #
+            . # . # .
+            . . # . .
+            . . # . .
+            . . # . .
+            `)
     }
 })
