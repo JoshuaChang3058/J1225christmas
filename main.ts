@@ -1,4 +1,3 @@
-let light2 = 0
 function 第三段 () {
     music.playTone(440, music.beat(BeatFraction.Whole))
     music.playTone(698, music.beat(BeatFraction.Whole))
@@ -41,7 +40,27 @@ function rvm1218_2 () {
     music.playTone(392, music.beat(BeatFraction.Whole))
 }
 input.onSound(DetectedSound.Loud, function () {
-	
+    if (0 > 87) {
+        第一段()
+        第二段()
+        第一段()
+        第三段()
+        第四段()
+        第五段()
+        第七段()
+        第八段()
+    }
+    rvm1218_1()
+    rvm1218_2()
+    rvm1218_3()
+    rvm1218_4()
+    rvm1218_5()
+    rvm1218_6()
+    rvm1217_1()
+    rvm1217_2()
+    rvm1217_3()
+    rvm1217_4()
+    rvm1217_5()
 })
 function rvm1217_4 () {
     music.playTone(392, music.beat(BeatFraction.Whole))
@@ -235,23 +254,60 @@ function 第一段 () {
     music.rest(music.beat(BeatFraction.Whole))
     music.rest(music.beat(BeatFraction.Half))
 }
+let light2 = 0
+basic.pause(1000)
 basic.forever(function () {
     light2 = input.lightLevel()
-    if (0 > 120) {
+    if (0 > 87) {
         basic.showString("Hello!")
         basic.showLeds(`
-            # # # # #
-            . . # . .
-            . . # . .
-            # . # . .
+            . # # . .
+            # . . # .
+            # . . . .
+            # . . # .
             . # # . .
             `)
         basic.showLeds(`
+            # # # . .
+            # . . # .
+            # . . # .
+            # . . # .
+            # # # . .
+            `)
+        basic.showLeds(`
+            . # # # .
+            # . . . #
+            # . . . #
+            # . . . #
+            . # # # .
+            `)
+        basic.showLeds(`
             # # # # #
             # . . . .
             # # # # #
             # . . . .
             # # # # #
+            `)
+        basic.showLeds(`
+            . # . . .
+            . # . . .
+            . # . . .
+            . # . . .
+            . # # # #
+            `)
+        basic.showLeds(`
+            # . . . #
+            # # . . #
+            # . # . #
+            # . . # #
+            # . . . #
+            `)
+        basic.showLeds(`
+            . # # # .
+            . . # . .
+            . . # . .
+            . . # . .
+            . # # # .
             `)
         basic.showLeds(`
             # . . . #
@@ -268,11 +324,26 @@ basic.forever(function () {
             # . . . #
             `)
         basic.showLeds(`
-            # . . . #
+            . # # # .
+            . . # . .
+            . . # . .
+            . . # . .
+            . # # # .
+            `)
+        basic.showLeds(`
+            . # . . .
+            . . . . .
+            . . . . .
+            . . . . .
+            . . . . .
+            `)
+        basic.showString("2021HAPPY")
+        basic.showLeds(`
+            # . # . #
             . # . # .
-            . . # . .
-            . . # . .
-            . . # . .
+            # . # . #
+            . # . # .
+            # . # . #
             `)
     }
 })
