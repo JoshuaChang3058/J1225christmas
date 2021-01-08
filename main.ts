@@ -331,11 +331,11 @@ basic.forever(function () {
             . # # # .
             `)
         basic.showLeds(`
+            . # # . .
+            # . . # .
             . # . . .
-            . . . . .
-            . . . . .
-            . . . . .
-            . . . . .
+            . . # . .
+            # # . . .
             `)
         basic.showString("2021HAPPY")
         basic.showLeds(`
